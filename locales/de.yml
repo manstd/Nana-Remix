@@ -9,7 +9,7 @@ inline_help_text: "** Inline-Anleitung **\nGeben Sie einfach \"@ {} (Befehl)\" i
 start_message: "Hallo {},\nNana ist bereit für Sie!\n===================\n-> Python: `{}`\n-> Userbot: `{} (v {})`\n-> Assistent: `Running (v {})`\n-> Datenbank: `{}`\n-> Gruppe beigetreten: `{}`\n===================\n`Um mehr über den Bot zu erfahren, drücke den Knopf unten`"
 help_btn: "Hilfe"
 help_str: "Sie können {} auf Ihrem Userbot verwenden, um diese Befehle auszuführen.\nHier sind die aktuellen Module, die Sie haben\nHauptbefehle verfügbar:\n - /start: Holen Sie sich Ihren Bot-Status\n - /stats: Erhalte deinen Userbot-Status\n - /settings: Einstellungen Ihres Userbots\n - /getme: Holen Sie sich Ihre Userbot-Profilinformationen\n - /help: Holen Sie sich dieses Menü"
-alive_str: "**[Nana-Remix](https://github.com/pokurt/Nana-Remix):**\n - **Bot**: `{} (v {})`\n - **Pyrogram**: `{}`\n - **Python **: `{}`\n - ** Datenbank**: `{}`"
+alive_str: "**[Nana-Remix](https://github.com/pokurt/Nana-Remix):**\n - **Bot**: `{} (v {})`\n - **Pyrogram**: `{}`\n - **Python **: `{}`\n - **Datenbank**: `{}`"
 # Gdrive Assistant
 gdrive_credential_err_heroku: "Hallo, Sie sind anscheinend nicht bei Google Drive angemeldet. Ich kann Ihnen bei der Anmeldung helfen.\nZunächst müssen Sie Ihre Google Drive-API aktivieren\n1. [Hier klicken](https://developers.google.com/drive/api/v3/quickstart/python),\nKlicken Sie auf Laufwerks-API aktivieren\n2. Melden Sie sich bei Ihrem Google-Konto an (überspringen Sie dies, wenn Sie bereits angemeldet sind).\n3. Klicken Sie nach dem Anmelden erneut auf Laufwerk-API aktivieren.\nund klicken Sie auf die Schaltfläche Client-Konfiguration herunterladen. Laden Sie diese herunter.\n4. Nachdem Sie diese Datei heruntergeladen haben, öffnen Sie diese Datei und kopieren Sie den gesamten Inhalt auf dashboard.heroku.com.\nWählen Sie Ihre Apps aus und gehen Sie zu den Einstellungen, gehen Sie zu config vars und fügen Sie den Schlüssel mit dem Namen gdrive_credentials mit dem Wert Ihrer Anmeldeinformationen hinzu\nDanach können Sie die nächste Anleitung nach Typ /gdrive aufrufen\n"
 # Adminlist Module
@@ -60,7 +60,7 @@ unlock_all: "`Alle Berechtigungen aus diesem Chat freigeschaltet!`"
 unlock_invalid: "`Ungültiger Entsperrtyp!`"
 unlock_chat: "`{} Für diesen Chat freigeschaltet!`"
 # viewlocks
-permission_view_str: "<b>Chat-Berechtigungen: </b>\n<b>Nachrichten senden: </b> {}\n<b>Medien senden: </b> {}\n<b> Aufkleber senden: </b> {}\n<b> Animationen senden: </b> {}\n<b> Kann Spiele spielen: </b> {}\n<b> Kann Inline-Bots verwenden: </b> {}\n<b> Webseitenvorschau: </b> {}\n<b> Umfragen senden: </b> {}\n<b> Info ändern: </b> {}\n<b> Benutzer einladen: </b> {}\n<b> Pin Nachrichten: </b> {}"
+permission_view_str: "<b>Chat-Berechtigungen:</b>\n<b>Nachrichten senden:</b> {}\n<b>Medien senden:</b> {}\n<b>Aufkleber senden:</b> {}\n<b>Animationen senden:</b> {}\n<b>Kann Spiele spielen:</b> {}\n<b>Kann Inline-Bots verwenden:</b> {}\n<b>Webseitenvorschau:</b> {}\n<b>Umfragen senden:</b> {}\n<b>Info ändern:</b> {}\n<b>Benutzer einladen:</b> {}\n<b>Pin Nachrichten:</b> {}"
 # SpeedTest Module
 # Speed-Test
 speed_test_trigger: "Wählen Sie den SpeedTest-Modus"
