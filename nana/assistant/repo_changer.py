@@ -50,9 +50,8 @@ async def configrepo():
     if not os.path.exists(cache_path):
         config_url = "https://raw.githubusercontent.com/legenhand/Nana-bot-file/master/config/repo.json"
         urllib.request.urlretrieve(config_url, cache_path)
-    f = open("nana/cache/repo.json")
-    data_repo = json.load(f)
-    f.close()
+    with open("nana/cache/repo.json") as f:
+        data_repo = json.load(f)
     return data_repo
 
 
@@ -62,9 +61,11 @@ async def chgrepo(_, query):
 
     data_repo = await configrepo()
 
-    list_button = []
-    for r in data_repo.items():
-        list_button.append([InlineKeyboardButton(r[0], callback_data=r[0])])
+    list_button = [
+        [InlineKeyboardButton(r[0], callback_data=r[0])]
+        for r in data_repo.items()
+    ]
+
     list_button.append([InlineKeyboardButton("⬅ back️", callback_data="back")])
     button = InlineKeyboardMarkup(list_button)
     await query.message.edit_text(text, reply_markup=button)
@@ -75,11 +76,11 @@ async def chgrepoo(_, query):
     rp = await configrepo()
     global repo_name
     repo_name = query.data
-    list_button = []
-    for version in rp[query.data]["version"]:
-        list_button.append(
-            [InlineKeyboardButton(version, callback_data=f"vs{version}")]
-        )
+    list_button = [
+        [InlineKeyboardButton(version, callback_data=f"vs{version}")]
+        for version in rp[query.data]["version"]
+    ]
+
     list_button.append([InlineKeyboardButton("⬅ back️", callback_data="change_repo")])
     text = "**⚙️ Repository Configuration **\n" "`Change Your Repo Source Here! `\n"
     text += f"""**Author** : {rp[query.data]["Author"]}

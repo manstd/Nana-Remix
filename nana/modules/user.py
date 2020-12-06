@@ -116,7 +116,7 @@ async def clone(client, message):
             my_self["about"],
         )
     q = await app.get_profile_photos(target)
-    await client.download_media(q[0], file_name="nana/downloads/pp.png")
+    dl = await client.download_media(q[0], file_name="nana/downloads/pp.png")
     await app.set_profile_photo(photo="nana/downloads/pp.png")
     t = await app.get_users(target)
     t = await client.send(
@@ -134,7 +134,7 @@ async def clone(client, message):
             about=t["about"] if t["about"] is not None else "",
         )
     )
-    os.remove("nana/downloads/pp.png")
+    os.remove(dl)
     await edrep(message, text="`New identity has changed!`")
     await sleep(5)
     await message.delete()
